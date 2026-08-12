@@ -90,30 +90,4 @@ export const config = {
   },
 } as const;
 
-export type Config = typeof config;export const config = {
-  profile: {
-    username: "@rootward3n",
-    name: "Shravan Kubade",
-    role: "IT Student",
-    tagline: "Building intelligent systems at the intersection of AI, cybersecurity, and software engineering.",
-    bio: "IT student passionate about Artificial Intelligence, Cybersecurity, and emerging technologies. Currently exploring neural architectures, threat modeling, and building robust software systems. I enjoy diving deep into complex problems and emerging with practical solutions.",
-    location: "India",
-    status: "Open to opportunities",
-  },
-  socials: {
-    github: "https://github.com/rootward3n",
-    instagram: "https://instagram.com/rootward3n",
-    linkedin: "",
-    email: "digicartelecom@gmail.com",
-  },
-  projects: [
-    {
-      name: "[PROJECT NAME]",
-      description: "[PROJECT DESCRIPTION - A brief summary of what this project does and the problem it solves.]",
-and software engineering. Exploring neural architectures, threat modeling, and robust software systems.",
-    ogImage: "/images/og-image.png",
-    twitterHandle: "@rootward3n",
-  },
-} as const;
-
 export type Config = typeof config;
