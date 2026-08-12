@@ -1,0 +1,181 @@
+:root {
+  /* ——— Color Palette ——— */
+  --color-bg-primary: #0a0a0a;
+  --color-bg-elevated: #141414;
+  --color-bg-card: #1a1a1a;
+  --color-bg-input: #222222;
+
+  --color-fg-primary: #ffffff;
+  --color-fg-secondary: #b8b8b8;
+  --color-fg-muted: #6b6b6b;
+  --color-fg-inverted: #0a0a0a;
+
+--color-accent-primary: #a3ff00;
+  --color-accent-primary-dim: #7fcc00;
+  --color-accent-secondary: #22cc44;
+  --color-accent-tertiary: #00d4aa;
+  --color-accent-tertiary-dim: #00a888;
+  --color-accent-warning: #ffd60a;
+  --color-accent-error: #ff3b3b;
+
+  --color-border-subtle: rgba(163, 255, 0, 0.08);
+  --color-border-default: rgba(163, 255, 0, 0.15);
+  --color-border-emphasis: rgba(163, 255, 0, 0.35);
+  --color-border-card: rgba(255, 255, 255, 0.05);
+
+  --color-glow-primary: rgba(163, 255, 0, 0.4);
+  --color-glow-secondary: rgba(34, 204, 68, 0.35);
+  --color-glow-tertiary: rgba(0, 212, 170, 0.35);
+  --color-glow-subtle: rgba(163, 255, 0, 0.12);
+
+  /* ——— Typography ——— */
+  --font-display: "Space Grotesk", "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-mono: "JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-ui: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --font-size-xs: clamp(0.65rem, 0.6rem + 0.25vw, 0.75rem);
+  --font-size-sm: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --font-size-base: clamp(0.875rem, 0.825rem + 0.25vw, 1rem);
+  --font-size-lg: clamp(1rem, 0.925rem + 0.375vw, 1.125rem);
+  --font-size-xl: clamp(1.25rem, 1.125rem + 0.625vw, 1.5rem);
+  --font-size-2xl: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+  --font-size-3xl: clamp(2rem, 1.7rem + 1.5vw, 3rem);
+  --font-size-4xl: clamp(2.5rem, 2rem + 2.5vw, 4rem);
+  --font-size-5xl: clamp(3.5rem, 2.5rem + 5vw, 6rem);
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.1;
+  --line-height-snug: 1.35;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.75;
+
+  /* ——— Spacing ——— */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* ——— Border Radius ——— */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* ——— Shadows & Glows ——— */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.6);
+
+  --glow-sm: 0 0 8px var(--color-glow-subtle);
+  --glow-md: 0 0 16px var(--color-glow-primary), 0 0 32px var(--color-glow-subtle);
+  --glow-lg: 0 0 24px var(--color-glow-primary), 0 0 48px var(--color-glow-subtle);
+  --glow-inset: inset 0 0 16px var(--color-glow-subtle);
+
+  /* ——— Transitions ——— */
+  --transition-fast: 120ms ease-out;
+  --transition-base: 200ms ease-out;
+  --transition-slow: 350ms ease-out;
+  --transition-spring: 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ——— Z-Indices ——— */
+  --z-background: 0;
+  --z-content: 10;
+  --z-sticky: 20;
+  --z-overlay: 30;
+  --z-modal: 40;
+  --z-tooltip: 50;
+  --z-canvas: 1;
+  --z-canvas-overlay: 5;
+
+  /* ——— Layout ——— */
+  --container-max: 1200px;
+  --container-padding: clamp(1rem, 3vw, 2rem);
+  --header-height: 64px;
+
+  /* ——— Breakpoints (for reference in JS) ——— */
+  --bp-sm: 640px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1280px;
+  --bp-2xl: 1536px;
+}
+
+/* ——— Reduced Motion ——— */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-fast: 0ms;
+    --transition-base: 0ms;
+    --transition-slow: 0ms;
+    --transition-spring: 0ms;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ——— High Contrast Mode ——— */
+@media (prefers-contrast: high) {
+  :root {
+    --color-border-subtle: rgba(163, 255, 0, 0.3);
+    --color-border-default: rgba(163, 255, 0, 0.5);
+    --color-border-emphasis: rgba(163, 255, 0, 0.8);
+    --color-fg-muted: #9ab0cc;
+  }
+}
+
+/* ——— Focus Visible ——— */
+:focus-visible {
+  outline: 2px solid var(--color-accent-primary);
+  outline-offset: 2px;
+}
+
+/* ——— Selection ——— */
+::selection {
+  background: rgba(163, 255, 0, 0.25);
+  color: var(--color-fg-primary);
+}
+
+/* ——— Scrollbar ——— */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border-emphasis) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-emphasis);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-primary);
+}

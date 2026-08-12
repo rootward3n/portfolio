@@ -1,0 +1,60 @@
+.section {
+  position: relative;
+  z-index: var(--z-content);
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+/* Padding */
+.p-sm { padding: var(--space-12) 0; }
+.p-md { padding: var(--space-16) 0; }
+.p-lg { padding: var(--space-20) 0; }
+.p-xl { padding: var(--space-24) 0; }
+
+@media (max-width: 768px) {
+  .p-sm { padding: var(--space-8) 0; }
+  .p-md { padding: var(--space-12) 0; }
+  .p-lg { padding: var(--space-16) 0; }
+  .p-xl { padding: var(--space-20) 0; }
+}
+
+/* Background variants */
+.bg-none { background: transparent; }
+
+.bg-elevated {
+  background: var(--color-bg-elevated);
+}
+
+.bg-elevated::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(163, 255, 0, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(163, 255, 0, 0.02) 1px, transparent 1px);
+  background-size: 100px 100px;
+  pointer-events: none;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 90%);
+}
+
+.bg-grid {
+  background: var(--color-bg-primary);
+}
+
+.bg-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(163, 255, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(163, 255, 0, 0.03) 1px, transparent 1px);
+  background-size: 80px 80px;
+  pointer-events: none;
+  mask-image: radial-gradient(ellipse at center, black 20%, transparent 80%);
+}

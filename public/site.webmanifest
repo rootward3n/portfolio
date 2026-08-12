@@ -1,0 +1,23 @@
+{
+  "name": "Shravan Kubade | Portfolio",
+  "short_name": "Portfolio",
+  "description": "IT Student building at the intersection of AI, cybersecurity, and software engineering",
+  "start_url": "/portfolio/",
+  "display": "standalone",
+  "background_color": "#03060a",
+  "theme_color": "#00ffc8",
+  "icons": [
+    {
+      "src": "/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
